@@ -239,7 +239,7 @@ Webflow.push(function () {
     $(".loading_record--vm-widget").css({ display: "none" });
     $(".vm-widget--img-wrapper").css({ display: "none" });
     $(".play-pause--vm-widget").css({ display: "flex" });
-    $(".vm-widget--btns-wrapper").css({ display: "flex" });
+    $(".vm-widget--btns-wrapper").css({ display: "block" });
     $(".control_share--vm-widget").css({ display: "flex" });
     $(".loading-text").removeClass("active-text");
     $(".done-text").addClass("active-text");
