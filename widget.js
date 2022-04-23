@@ -266,6 +266,7 @@ Webflow.push(function () {
   }
 
   async function startRecordProcess() {
+    $(".div-block-466").css({ display: "none" });
     resetPlay();
     if (navigator.mediaDevices) {
       await validateMicrophoneAccess();
