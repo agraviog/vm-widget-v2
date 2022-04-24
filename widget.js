@@ -243,6 +243,7 @@ Webflow.push(function () {
     $(".control_share--vm-widget").css({ display: "flex" });
     $(".loading-text").removeClass("active-text");
     $(".done-text").addClass("active-text");
+    $(".control_btns--vm-widget").css({ display: "flex" });
   }
 
   function setMicrophoneLocalStorage() {
