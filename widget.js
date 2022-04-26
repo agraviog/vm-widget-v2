@@ -410,6 +410,8 @@ Webflow.push(function () {
       setTimeout(() => {
         fetchAudioUrl();
       }, 1000);
+    } else {
+      $(".convert-failed-wrapper").css({ display: "flex" });
     }
   }
 
@@ -575,6 +577,9 @@ Webflow.push(function () {
   });
 
   $(".control_reset--vm-widget").on("click", function () {
+    location.reload();
+  });
+  $(".record_new_audio_button").on("click", function () {
     location.reload();
   });
 });
