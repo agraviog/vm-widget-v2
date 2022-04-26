@@ -322,6 +322,7 @@ Webflow.push(function () {
           mediaRecorder.stop();
         }
       } catch (e) {
+        $(".mic-detection-wrapper").css({ display: "flex" });
         localStorage.removeItem(REQUEST_KEY);
       }
     }
@@ -354,6 +355,7 @@ Webflow.push(function () {
 
       if (results.some((res) => [400, 500].includes(res.status))) {
         clearFetchInterval();
+        $(".convert-failed-wrapper").css({ display: "flex" });
         throw new Error("Fetch was not successful!");
       }
       if (results.every((res) => res.status === 200)) {
