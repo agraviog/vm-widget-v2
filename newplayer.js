@@ -75,6 +75,7 @@ Webflow.push(function () {
     track2.currentTime = 0;
     playing = true;
     togglebtn.disabled = true;
+    track1.muted = false;
   };
 
   harmonyOption.onclick = function () {
@@ -88,6 +89,7 @@ Webflow.push(function () {
     track2.currentTime = 0;
     playing = true;
     togglebtn.disabled = true;
+    track1.muted = false;
   };
 
   phoneOption.onclick = function () {
@@ -101,6 +103,7 @@ Webflow.push(function () {
     track2.currentTime = 0;
     playing = true;
     togglebtn.disabled = true;
+    track1.muted = false;
   };
 
   plyApple.addEventListener("timeupdate", (e) => {
