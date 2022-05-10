@@ -267,7 +267,7 @@ Webflow.push(function () {
   }
 
   async function startRecordProcess() {
-    $(".headphone-on--vm-widget").css("opacity", "0");
+    $(".headphone-on--vm-widget").css({ display: "none" });
     resetPlay();
     if (navigator.mediaDevices) {
       await validateMicrophoneAccess();
