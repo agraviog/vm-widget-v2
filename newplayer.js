@@ -1,14 +1,20 @@
 var Webflow = Webflow || [];
 Webflow.push(function () {
+  //voices
   var plyApple = document.getElementById("apple-vm");
   var plyHarmony = document.getElementById("harmony-vm");
   var plyPhone = document.getElementById("phone-vm");
+  var plyDark = document.getElementById("darklord-vm");
   var plyAppleOrig = document.getElementById("apple");
   var plyHarmonyOrig = document.getElementById("harmony");
   var plyPhoneOrig = document.getElementById("phone");
+  var plyDarkOrig = document.getElementById("darklord");
+  //voices btns
   var appleOption = document.getElementById("apple-o");
   var harmonyOption = document.getElementById("harmony-o");
   var phoneOption = document.getElementById("phone-o");
+  var darkOption = document.getElementById("dark-o");
+  //duration, checkbox, play
   var duration = document.getElementById("duration--nplayer");
   var togglebtn = document.getElementById("checkbox_nplayer");
   var progressBar = document.getElementById("progress-play");
@@ -106,6 +112,20 @@ Webflow.push(function () {
     track1.muted = false;
   };
 
+  darkOption.onclick = function () {
+    voice = 4;
+    progressBar.style.width = "0%";
+    togglePlay(true);
+    $(".checkbox--nplayer").addClass("w--redirected-checked");
+    track1.pause();
+    track1.currentTime = 0;
+    track2.pause();
+    track2.currentTime = 0;
+    playing = true;
+    togglebtn.disabled = true;
+    track1.muted = false;
+  };
+
   plyApple.addEventListener("timeupdate", (e) => {
     currentTime = e.target.currentTime.toFixed(2);
     musicDuration = plyApple.duration.toFixed(2);
@@ -154,6 +174,22 @@ Webflow.push(function () {
     }
   });
 
+  plyDark.addEventListener("timeupdate", (e) => {
+    currentTime = e.target.currentTime.toFixed(2);
+    musicDuration = plyDark.duration.toFixed(2);
+    progress = (currentTime / musicDuration) * 100;
+    progressBar.style.width = `${progress}%`;
+    duration.innerHTML = secondsToTime(currentTime);
+
+    if (currentTime == musicDuration) {
+      togglePlay(true);
+      togglebtn.disabled = true;
+      $(".checkbox--nplayer").addClass("w--redirected-checked");
+      playing = true;
+      track1.muted = false;
+    }
+  });
+
   $(".control_play--nplayer").on("click", function (e) {
     togglebtn.disabled = false;
     switch (voice) {
@@ -168,6 +204,10 @@ Webflow.push(function () {
       case 3:
         track1 = plyPhone;
         track2 = plyPhoneOrig;
+        break;
+      case 4:
+        track1 = plyDark;
+        track2 = plyDarkOrig;
         break;
     }
     if (playing) {
