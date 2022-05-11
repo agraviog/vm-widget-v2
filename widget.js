@@ -38,19 +38,19 @@ Webflow.push(function () {
   let fetchInterval = null;
   let retryCount = 0;
   const convertedFiles = {
-    baby: "",
-    "magic-chords": "",
-    cave: "",
+    ogre: "",
+    "dark-angel": "",
+    storyteller: "",
     original: "",
   };
 
   const fetchIds = {
-    baby: "",
-    "magic-chords": "",
-    cave: "",
+    ogre: "",
+    "dark-angel": "",
+    storyteller: "",
   };
 
-  const convertVoiceIds = ["baby", "magic-chords", "cave"];
+  const convertVoiceIds = ["ogre", "dark-angel", "storyteller"];
 
   function getFileUrlOnActiveType() {
     const voiceId = $(".vm-widget--btns").attr("data-voiceid") || DEFAULT_VOICE;
@@ -371,9 +371,9 @@ Webflow.push(function () {
         //setAudio(convertedFiles.original, ORIG_AUDIO);
         //setAudio(recentActiveFile, MOD_AUDIO);
         voice1 = setAudio(convertedFiles.original, "orig");
-        voice2 = setAudio(convertedFiles.baby, "baby");
-        voice3 = setAudio(convertedFiles.cave, "cave");
-        voice4 = setAudio(convertedFiles["magic-chords"], "magic-chords");
+        voice2 = setAudio(convertedFiles.ogre, "ogre");
+        voice3 = setAudio(convertedFiles.storyteller, "storyteller");
+        voice4 = setAudio(convertedFiles["dark-angel"], "dark-angel");
         voice1.addEventListener("timeupdate", (e) => {
           console.log(currentTime);
           var currentTime = e.target.currentTime.toFixed(2);
