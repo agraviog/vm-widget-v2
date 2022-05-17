@@ -84,6 +84,7 @@ Webflow.push(function () {
       cursorColor: "transparent",
       height: 28,
       barRadius: 2,
+      hideScrollbar: true,
     });
     wavesurfer.load(url);
     wavesurfer.setVolume(0);
