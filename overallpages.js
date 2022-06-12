@@ -40,7 +40,7 @@ var fadeUp2 = anime.timeline({
 });
 
 fadeUp2.add({
-  targets: ".fade-up-2 .letter",
+  targets: ".fade-up2 .letter",
   translateY: [100, 0],
   translateZ: 0,
   opacity: [0, 1],
