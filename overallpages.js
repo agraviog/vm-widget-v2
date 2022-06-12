@@ -51,7 +51,6 @@ fadeUp2.add({
 
 // Play your animation with these
 fadeUp.play();
-fadeUp2.play();
 
 // Wait before playing animation
 setTimeout(() => {
