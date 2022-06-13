@@ -33,24 +33,7 @@ fadeUp.add({
   delay: (el, i) => 300 + 30 * i,
 });
 
-// Fade Up Animation 2
-var fadeUp2 = anime.timeline({
-  loop: false,
-  autoplay: false,
-});
-
-fadeUp2.add({
-  targets: ".fade-up-2 .letter",
-  translateY: [100, 0],
-  translateZ: 0,
-  opacity: [0, 1],
-  easing: "easeOutExpo",
-  duration: 1400,
-  delay: (el, i) => 300 + 30 * i,
-});
-
 // Play your animation with these
-fadeUp.play();
 
 // Wait before playing animation
 setTimeout(() => {
@@ -70,7 +53,7 @@ $(".your-button-class").mouseenter(function () {
 // Play animation when scrolled into view
 $("#text-container").on("inview", function (event, isInView) {
   if (isInView) {
-    fadeUp2.play();
+    fadeUp.play();
   } else {
   }
 });
