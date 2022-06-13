@@ -72,9 +72,7 @@ $(".nav__btn").on("mouseleave", function () {
   $(".link__circle--nav").removeClass("btn__hover-in--nav");
 });
 
-$(".footer__link--wrapper").on("mouseenter", function () {
+$(".footer__link").on("mouseenter", function () {
+  $(".btn__hover-in--footer").removeClass("btn__hover-in--footer");
   $(".link__circle--footer").addClass("btn__hover-in--footer");
-});
-$(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link__circle--footer").removeClass("btn__hover-in--footer");
 });
