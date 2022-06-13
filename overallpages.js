@@ -59,24 +59,21 @@ $("#text-container").on("inview", function (event, isInView) {
 });
 
 $(".link__wrap").on("mouseenter", function () {
-  $(".link__circle").toggleClass("btn__hover-in");
+  $(".link__circle").addClass("btn__hover-in");
 });
 $(".link__wrap").on("mouseleave", function () {
   $(".link__circle").removeClass("btn__hover-in");
 });
 
 $(".nav__btn").on("mouseenter", function () {
-  $(".link__circle--nav").toggleClass("btn__hover-in--nav");
+  $(".link__circle--nav").addClass("btn__hover-in--nav");
 });
 $(".nav__btn").on("mouseleave", function () {
   $(".link__circle--nav").removeClass("btn__hover-in--nav");
 });
 
 $(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link__circle--footer").toggleClass("btn__hover-in--footer");
-});
-$(".footer__link--wrapper").on("mouseleave", function () {
-  $(".btn__hover-in--footer").removeClass("btn__hover-in--footer");
+  $(".link__circle--footer").addClass("btn__hover-in--footer");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
   $(".link__circle--footer").removeClass("btn__hover-in--footer");
