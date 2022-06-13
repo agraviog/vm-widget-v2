@@ -76,5 +76,8 @@ $(".footer__link--wrapper").on("mouseenter", function () {
   $(".link__circle--footer").toggleClass("btn__hover-in--footer");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
+  $(".btn__hover-in--footer").removeClass("btn__hover-in--footer");
+});
+$(".footer__link--wrapper").on("mouseleave", function () {
   $(".link__circle--footer").removeClass("btn__hover-in--footer");
 });
