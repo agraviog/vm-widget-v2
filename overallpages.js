@@ -68,7 +68,7 @@ $(".your-button-class").mouseenter(function () {
 });
 
 // Play animation when scrolled into view
-$("#heading-container").on("inview", function (event, isInView) {
+$("#text-container").on("inview", function (event, isInView) {
   if (isInView) {
     fadeUp2.play();
   } else {
