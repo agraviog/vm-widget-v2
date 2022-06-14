@@ -71,10 +71,3 @@ $(".nav__btn").on("mouseenter", function () {
 $(".nav__btn").on("mouseleave", function () {
   $(".link__circle--nav").removeClass("btn__hover-in--nav");
 });
-
-$(".footer__link").on("mouseenter", function () {
-  $(".link-tw").addClass("btn__hover-in--footer");
-});
-$(".footer__link").on("mouseleave", function () {
-  $(".link-tw").removeClass("btn__hover-in--footer");
-});
