@@ -47,13 +47,13 @@ Webflow.push(function () {
     if (currentTimeA == musicDurationA) {
       togglePlay(true);
       togglebtnA.disabled = true;
-      $(".checkbox--nplayer").addClass("w--redirected-checked");
+      $(".checkbox--nplayer-a").addClass("w--redirected-checked");
       playingA = true;
       track1A.muted = false;
     }
   });
 
-  $(".control_play--nplayer").on("click", function (e) {
+  $(".control_play--nplayer-a").on("click", function (e) {
     togglebtnA.disabled = false;
 
     if (playingA) {
@@ -79,7 +79,7 @@ Webflow.push(function () {
     }
   });
 
-  $("#checkbox_nplayer").on("click", (e) => {
+  $("#checkbox_nplayer-a").on("click", (e) => {
     if (track2A.muted) {
       track1A.muted = true;
       track2A.currentTimeA = track1A.currentTimeA;
