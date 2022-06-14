@@ -65,9 +65,9 @@ $(".link__wrap").on("mouseleave", function () {
   $(".link__circle").removeClass("btn__hover-in");
 });
 
-$(".nav__btn").on("mouseenter", function () {
-  $(".link__circle--nav").addClass("btn__hover-in--nav");
+$(".footer__link").on("mouseenter", function () {
+  $(this).find(".link-tw").eq(0).addClass("btn__hover-in--footer");
 });
-$(".nav__btn").on("mouseleave", function () {
-  $(".link__circle--nav").removeClass("btn__hover-in--nav");
+$(".footer__link").on("mouseleave", function () {
+  $(this).find(".link-tw").eq(0).removeClass("btn__hover-in--footer");
 });
