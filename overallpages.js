@@ -34,6 +34,7 @@ fadeUp.add({
 });
 
 // Play your animation with these
+fadeUp.play();
 
 // Wait before playing animation
 setTimeout(() => {
@@ -53,7 +54,6 @@ $(".your-button-class").mouseenter(function () {
 // Play animation when scrolled into view
 $("#text-container").on("inview", function (event, isInView) {
   if (isInView) {
-    fadeUp.play();
   } else {
   }
 });
@@ -73,6 +73,6 @@ $(".nav__btn").on("mouseleave", function () {
 });
 
 $(".footer__link").on("mouseenter", function () {
-  $(".ink__circle--footer").removeClass("btn__hover-in--footer");
+  $(".btn__hover-in--footer").removeClass("btn__hover-in--footer");
   $(".link__circle--footer").addClass("btn__hover-in--footer");
 });
