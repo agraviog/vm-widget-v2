@@ -73,6 +73,5 @@ $(".nav__btn").on("mouseleave", function () {
 });
 
 $(".footer__link").on("mouseenter", function () {
-  $(".btn__hover-in--footer").removeClass("btn__hover-in--footer");
-  $(".link__circle--footer").addClass("btn__hover-in--footer");
+  $(this).find(".link__circle--footer").eq(0).addClass("btn__hover-in--footer");
 });
