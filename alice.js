@@ -1,16 +1,16 @@
 var Webflow = Webflow || [];
 Webflow.push(function () {
   //voices
-  var plyHarmonyOrig = document.getElementById("harmony");
-  var plyHarmony = document.getElementById("harmony-vm");
+  var plyAliceOrig = document.getElementById("alice");
+  var plyAlice = document.getElementById("alice-vm");
 
   //checkbox, play
-  var togglebtn = document.getElementById("checkbox_nplayer");
-  var progressBar = document.getElementById("progress-play");
+  var togglebtn = document.getElementById("checkbox_nplayer-a");
+  var progressBar = document.getElementById("progress-play-a");
 
   var playing = true;
-  var track1 = plyHarmony;
-  var track2 = plyHarmonyOrig;
+  var track1 = plyAlice;
+  var track2 = plyAliceOrig;
   var currentTime;
   var musicDuration;
   var progress;
@@ -36,9 +36,9 @@ Webflow.push(function () {
     }
   }
 
-  plyHarmony.addEventListener("timeupdate", (e) => {
+  plyAlice.addEventListener("timeupdate", (e) => {
     currentTime = e.target.currentTime.toFixed(2);
-    musicDuration = plyHarmony.duration.toFixed(2);
+    musicDuration = plyAlice.duration.toFixed(2);
     progress = (currentTime / musicDuration) * 100;
     progressBar.style.width = `${progress}%`;
 
@@ -91,47 +91,5 @@ Webflow.push(function () {
       playing = false;
       console.log("Track 1");
     }
-  });
-
-  $(".link__wrap").on("mouseenter", function () {
-    $(".link__circle").addClass("btn__hover-in");
-  });
-  $(".link__wrap").on("mouseleave", function () {
-    $(".link__circle").removeClass("btn__hover-in");
-  });
-
-  $(".nav__btn").on("mouseenter", function () {
-    $(".link__circle--nav").addClass("btn__hover-in--nav");
-  });
-  $(".nav__btn").on("mouseleave", function () {
-    $(".link__circle--nav").removeClass("btn__hover-in--nav");
-  });
-
-  $(".link-tw").on("mouseenter", function () {
-    $("#circle-tw").addClass("btn__hover-in--footer");
-  });
-  $(".link-tw").on("mouseleave", function () {
-    $("#circle-tw").removeClass("btn__hover-in--footer");
-  });
-
-  $(".link-tt").on("mouseenter", function () {
-    $("#circle-tt").addClass("btn__hover-in--footer");
-  });
-  $(".link-tt").on("mouseleave", function () {
-    $("#circle-tt").removeClass("btn__hover-in--footer");
-  });
-
-  $(".link-yt").on("mouseenter", function () {
-    $("#circle-yt").addClass("btn__hover-in--footer");
-  });
-  $(".link-yt").on("mouseleave", function () {
-    $("#circle-yt").removeClass("btn__hover-in--footer");
-  });
-
-  $(".link-dc").on("mouseenter", function () {
-    $("#circle-dc").addClass("btn__hover-in--footer");
-  });
-  $(".link-dc").on("mouseleave", function () {
-    $("#circle-dc").removeClass("btn__hover-in--footer");
   });
 });
