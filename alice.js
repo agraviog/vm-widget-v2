@@ -5,8 +5,8 @@ Webflow.push(function () {
   var plyAlice = document.getElementById("alice-vm");
 
   //checkbox, play
-  var togglebtn = document.getElementById("checkbox_nplayer-a");
-  var progressBar = document.getElementById("progress-play-a");
+  var togglebtnA = document.getElementById("checkbox_nplayer-a");
+  var progressBarA = document.getElementById("progress-play-a");
 
   var playingA = true;
   var track1A = plyAlice;
@@ -19,7 +19,7 @@ Webflow.push(function () {
   $(window).on("load", function () {
     $("#nplayer_play-a").removeClass("control_disable-a disable-play-a");
     $(".checkbox--nplayer-a").addClass("w--redirected-checked");
-    togglebtn.disabled = true;
+    togglebtnA.disabled = true;
   });
 
   function togglePlay(showPlay) {
@@ -42,11 +42,11 @@ Webflow.push(function () {
     currentTimeA = e.target.currentTimeA.toFixed(2);
     musicDurationA = plyAlice.duration.toFixed(2);
     progressA = (currentTimeA / musicDurationA) * 100;
-    progressBar.style.width = `${progressA}%`;
+    progressBarA.style.width = `${progressA}%`;
 
     if (currentTimeA == musicDurationA) {
       togglePlay(true);
-      togglebtn.disabled = true;
+      togglebtnA.disabled = true;
       $(".checkbox--nplayer").addClass("w--redirected-checked");
       playingA = true;
       track1A.muted = false;
@@ -54,7 +54,7 @@ Webflow.push(function () {
   });
 
   $(".control_play--nplayer").on("click", function (e) {
-    togglebtn.disabled = false;
+    togglebtnA.disabled = false;
 
     if (playingA) {
       playingA = !playingA;
@@ -75,7 +75,7 @@ Webflow.push(function () {
       }
       track1A.pause();
       togglePlay(true);
-      togglebtn.disabled = true;
+      togglebtnA.disabled = true;
     }
   });
 
