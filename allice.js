@@ -22,7 +22,7 @@ Webflow.push(function () {
     togglebtnA.disabled = true;
   });
 
-  function togglePlay(showPlay) {
+  function togglePlayA(showPlay) {
     if (showPlay) {
       document.getElementsByClassName("play_icon--nplayer-a")[0].style.display =
         "block";
@@ -45,7 +45,7 @@ Webflow.push(function () {
     progressBarA.style.width = `${progressA}%`;
 
     if (currentTimeA == musicDurationA) {
-      togglePlay(true);
+      togglePlayA(true);
       togglebtnA.disabled = true;
       $(".checkbox--nplayer-a").addClass("w--redirected-checked");
       playingA = true;
@@ -67,14 +67,14 @@ Webflow.push(function () {
         track2A.play();
         track2A.muted = true;
       }
-      togglePlay(false);
+      togglePlayA(false);
     } else {
       playingA = !playingA;
       if (track1A.muted) {
         track2A.pause();
       }
       track1A.pause();
-      togglePlay(true);
+      togglePlayA(true);
       togglebtnA.disabled = true;
     }
   });
