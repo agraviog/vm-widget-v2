@@ -66,37 +66,29 @@ $(".link__wrap").on("mouseleave", function () {
 });
 
 $(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link__circle--footer").find(".link-tw").addClass("btn__hover-in--footer");
+  $(".link-tw").addClass("btn__hover-in");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link__circle--footer")
-    .find(".link-tw")
-    .removeClass("btn__hover-in--footer");
+  $(".link-tw").removeClass("btn__hover-in");
 });
 
 $(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link__circle--footer").find(".link-tt").addClass("btn__hover-in--footer");
+  $(".link-tt").addClass("btn__hover-in");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link__circle--footer")
-    .find(".link-tt")
-    .removeClass("btn__hover-in--footer");
+  $(".link-tt").removeClass("btn__hover-in");
 });
 
 $(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link__circle--footer").find(".link-yt").addClass("btn__hover-in--footer");
+  $(".link-yt").addClass("btn__hover-in");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link__circle--footer")
-    .find(".link-yt")
-    .removeClass("btn__hover-in--footer");
+  $(".link-yt").removeClass("btn__hover-in");
 });
 
 $(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link__circle--footer").find(".link-dc").addClass("btn__hover-in--footer");
+  $(".link-dc").addClass("btn__hover-in");
 });
 $(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link__circle--footer")
-    .find(".link-dc")
-    .removeClass("btn__hover-in--footer");
+  $(".link-dc").removeClass("btn__hover-in");
 });
