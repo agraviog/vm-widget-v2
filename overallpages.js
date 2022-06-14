@@ -73,5 +73,8 @@ $(".nav__btn").on("mouseleave", function () {
 });
 
 $(".footer__link").on("mouseenter", function () {
-  $(this).find(".link__circle--footer").eq(0).addClass("btn__hover-in--footer");
+  $(".link-tw").addClass("btn__hover-in--footer");
+});
+$(".footer__link").on("mouseleave", function () {
+  $(".link-tw").removeClass("btn__hover-in--footer");
 });
