@@ -58,12 +58,12 @@ $("#text-container").on("inview", function (event, isInView) {
   }
 });
 
-$(".link__wrap").on("mouseenter", function () {
-  $(".link__circle").addClass("btn__hover-in");
-});
-$(".link__wrap").on("mouseleave", function () {
-  $(".link__circle").removeClass("btn__hover-in");
-});
+// $(".link__wrap").on("mouseenter", function () {
+//   $(".link__circle").addClass("btn__hover-in");
+// });
+// $(".link__wrap").on("mouseleave", function () {
+//   $(".link__circle").removeClass("btn__hover-in");
+// });
 
 // $(".footer__link--wrapper").on("mouseenter", function () {
 //   $(".link-tw").addClass("btn__hover-in");
@@ -86,9 +86,9 @@ $(".link__wrap").on("mouseleave", function () {
 //   $(".link-yt").removeClass("btn__hover-in");
 // });
 
-$(".footer__link--wrapper").on("mouseenter", function () {
-  $(".link-dc").addClass("btn__hover-in");
-});
-$(".footer__link--wrapper").on("mouseleave", function () {
-  $(".link-dc").removeClass("btn__hover-in");
-});
+// $(".footer__link--wrapper").on("mouseenter", function () {
+//   $(".link-dc").addClass("btn__hover-in");
+// });
+// $(".footer__link--wrapper").on("mouseleave", function () {
+//   $(".link-dc").removeClass("btn__hover-in");
+// });
