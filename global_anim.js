@@ -37,9 +37,11 @@ Webflow.push(function () {
     });
 
     $(".link-yt").on("mouseenter", function () {
+      $("#circle-yt").addClass("btn__hover-in--footer");
       $(".yt-radius").css("border-color", "rgba(255, 255, 255, 0)");
     });
     $(".link-yt").on("mouseleave", function () {
+      $("#circle-yt").removeClass("btn__hover-in--footer");
       $(".yt-radius").css("border-color", "rgba(255, 255, 255, 0.5)");
     });
 
@@ -48,6 +50,7 @@ Webflow.push(function () {
       $(".dc-radius").css("border-color", "rgba(255, 255, 255, 0)");
     });
     $(".link-dc").on("mouseleave", function () {
+      $("#circle-dc").removeClass("btn__hover-in--footer");
       $(".dc-radius").css("border-color", "rgba(255, 255, 255, 0.5)");
     });
   } else {
