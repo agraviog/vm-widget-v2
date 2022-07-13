@@ -9,8 +9,7 @@ gsap.from(
   ".text-reveal",
   {
     y: "100%",
-    opacity: 0.5,
-    duration: 1,
+    duration: 0.9,
     stagger: 0.08,
     ease: "slow(0.7, 0.7, false)",
   },
