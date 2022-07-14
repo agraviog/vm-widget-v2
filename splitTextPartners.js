@@ -1,19 +1,10 @@
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
-var mySplitText = nestedLinesSplit(".quote-1", {
+var mySplitText = nestedLinesSplit(".split-1", {
   type: "lines",
-  linesClass: "text-reveal-1",
+  linesClass: "split-text-1",
 });
-var mySplitText = nestedLinesSplit(".quote-2", {
-  type: "lines",
-  linesClass: "text-reveal-2",
-});
-var mySplitText = nestedLinesSplit(".quote-3", {
-  type: "lines",
-  linesClass: "text-reveal-3",
-});
-
-gsap.from(".text-reveal-1", {
+gsap.from(".split-text-1", {
   scrollTrigger: {
     trigger: ".block-1",
     start: "top center",
@@ -24,7 +15,11 @@ gsap.from(".text-reveal-1", {
   ease: "slow(0.7, 0.7, false)",
 });
 
-gsap.from(".text-reveal-2", {
+var mySplitText = nestedLinesSplit(".split-2", {
+  type: "lines",
+  linesClass: "split-text-2",
+});
+gsap.from(".split-text-2", {
   scrollTrigger: {
     trigger: ".block-2",
     start: "top center",
@@ -35,7 +30,11 @@ gsap.from(".text-reveal-2", {
   ease: "slow(0.7, 0.7, false)",
 });
 
-gsap.from(".text-reveal-3", {
+var mySplitText = nestedLinesSplit(".split-3", {
+  type: "lines",
+  linesClass: "split-text-3",
+});
+gsap.from(".split-text-3", {
   scrollTrigger: {
     trigger: ".block-3",
     start: "top center",
