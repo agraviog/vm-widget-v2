@@ -7,6 +7,7 @@ Webflow.push(function () {
   $(".link__wrap").on("mouseenter", function () {
     $(".link__circle").addClass("btn__hover-in");
   });
+
   $(".link__wrap").on("mouseleave", function () {
     $(".link__circle").removeClass("btn__hover-in");
   });

@@ -1,5 +1,59 @@
 var Webflow = Webflow || [];
 Webflow.push(function () {
+  //scrolltrigger
+  gsap.registerPlugin(SplitText, ScrollTrigger);
+
+  //nav blur when scrolled
+  gsap.to(".nav-main", {
+    scrollTrigger: {
+      trigger: "body",
+      start: "top top",
+      end: () => innerHeight / 2 + " top",
+      scrub: 0.25,
+    },
+    backdropFilter: "blur(20px)",
+    duration: 0.8,
+    ease: "Circ.easeOut",
+  });
+
+  //gsap split text
+  const quotes = document.querySelectorAll(".split-text");
+
+  function setupSplits() {
+    quotes.forEach((quote) => {
+      if (quote.anim) {
+        quote.anim.progress(1).kill();
+        quote.split.revert();
+      }
+
+      quote.split = new SplitText(quote, {
+        type: "lines,words,chars",
+        linesClass: "split-line",
+      });
+
+      // Set up the anim
+      quote.anim = gsap.from(quote.split.chars, {
+        scrollTrigger: {
+          trigger: quote,
+          start: "top 80%",
+        },
+        duration: 0.6,
+        ease: "circ.out",
+        y: 200,
+        stagger: 0.007,
+        onComplete: () => {
+          quote.anim.progress(1).kill();
+          quote.split.revert();
+        },
+      });
+    });
+  }
+
+  ScrollTrigger.addEventListener("refresh", setupSplits);
+  setupSplits();
+
+  //global animation
+
   if ($(window).width() > 991) {
     //main button animation
     $(".link__wrap").on("mouseenter", function () {
@@ -57,7 +111,20 @@ Webflow.push(function () {
   }
 
   //open menu no scroll
-  $(".menu-trigger").on("click", function () {
+  $(".menu-button").on("click", function () {
     $("body").toggleClass("no-scroll");
+  });
+
+  $("a").mouseenter(function () {
+    $(".cursor").click();
+  });
+  $("a").mouseleave(function () {
+    $(".cursor").click();
+  });
+
+  //nav menu animation when clicked
+  $(".menu-button").on("click", function () {
+    $(".voicemod-logo").toggleClass("logo-white");
+    $(".nav-main").toggleClass("nav-main-open");
   });
 });
