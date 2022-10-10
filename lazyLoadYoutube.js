@@ -8,7 +8,6 @@ function canUseWebP() {
 }
 var youtube = document.querySelectorAll("div.youtube-video[data-embed]");
 var canUseWebP = canUseWebP();
-
 (function () {
   var youtube = document.querySelectorAll(".youtube-video");
   for (var i = 0; i < youtube.length; i++) {
@@ -32,7 +31,6 @@ var canUseWebP = canUseWebP();
         youtube[i].appendChild(image);
       })(i)
     );
-
     youtube[i].addEventListener("click", function () {
       var iframe = document.createElement("iframe");
       iframe.setAttribute("frameborder", "0");

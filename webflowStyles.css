@@ -1910,19 +1910,3 @@ textarea.w-select {
   grid-row-gap: 16px;
   grid-column-gap: 16px;
 }
-@font-face {
-  font-family: "Replicalltt webfont";
-  src: url("https://uploads-ssl.webflow.com/621dae3ca310b354c76e0abd/62f0e6972f2108b934403428_replicalltt-regular-webfont.woff2")
-    format("woff2");
-  font-weight: 400;
-  font-style: normal;
-  font-display: swap;
-}
-@font-face {
-  font-family: "Replicalltt webfont";
-  src: url("https://uploads-ssl.webflow.com/621dae3ca310b354c76e0abd/62f0e6981ea8fa9481afc823_replicalltt-bold-webfont.woff2")
-    format("woff2");
-  font-weight: 700;
-  font-style: normal;
-  font-display: swap;
-}
