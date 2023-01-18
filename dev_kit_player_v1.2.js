@@ -39,7 +39,7 @@ Webflow.push(function () {
     'magic-chords': '',
     cave: '',
     'radio-demon': '',
-    'man-to-woman': '',
+    'cartoon-woman': '',
     deep: '',
     original: '',
   };
@@ -49,7 +49,7 @@ Webflow.push(function () {
     'magic-chords': '',
     cave: '',
     'radio-demon': '',
-    'man-to-woman': '',
+    'cartoon-woman': '',
     deep: '',
     original: '',
   };
@@ -59,7 +59,7 @@ Webflow.push(function () {
     'magic-chords',
     'cave',
     'radio-demon',
-    'man-to-woman',
+    'cartoon-woman',
     'deep',
   ];
 
@@ -526,7 +526,7 @@ Webflow.push(function () {
 
   $('.overlay--man-to-woman').on('click', function () {
     if (!$('.audio-snippet_btn').hasClass('control_disable')) {
-      showVoiceItem('man-to-woman');
+      showVoiceItem('cartoon-woman');
       voiceClick();
     }
   });
