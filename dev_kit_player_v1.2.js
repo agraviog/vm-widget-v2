@@ -526,7 +526,7 @@ Webflow.push(function () {
 
   $('.overlay--man-to-woman').on('click', function () {
     if (!$('.audio-snippet_btn').hasClass('control_disable')) {
-      showVoiceItem('cartoon-woman');
+      showVoiceItem('man-to-woman');
       voiceClick();
     }
   });
